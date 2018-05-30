@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tiempo Libre</title>
+        <link rel="stylesheet" href="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets_2017/stylesheets/styles2018.css">
+        <!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+        <link rel="stylesheet" href="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/clientSide/css/pace.flash.css">
+        <link rel="stylesheet" href="css/tiempolibre.css">
+        <link relf="stylesheet" href="css/lista.css">
+        <link relf="stylesheet" href="css/cuadrilla.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <!--<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
+        <script type="text/javascript" src="https://www.prensalibre.com/CMSScripts/jquery/jquery-cookie.js"></script>
+        <script type="text/javascript" src="http://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/clientSide/js/pace.min.js"></script>
+        <script type="text/javascript" src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/clientSide/js/mustache.min.js"></script>
+    </head>
+    <body>
+        <form>
+            <div id="contenedor-mayor-modulo-eventos" class="full-width">
+                <div id="contenedor-tipo-visualizacion" class="wrapper" data-visualizacion="lista">
+                    <p id="texto-visualizacion" class="display-inline text-bold">Visualización</p>
+                    <img class="img-tipo-visualizacion" src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/ASSETS/burger-black.png" title="Lista" onclick="lista_visualizacion_click();" />
+                    <img class="img-tipo-visualizacion" src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/ASSETS/scuard.png" title="Cuadrilla" onclick="cuadrila_visualizacion_click();" />
+                </div>
+                <script id="template-card-evento-lista" type="x-tmpl-mustache">
+                    <div class="evento-tiempo-libre card-evento-contenedor-lista" data-rowNumber="{{rowNumber}}">
+                        <div class="card-evento-lista">
+                            <div class="contenedor-imagen-lista">
+                                <img class="img-lista-mobile" src="{{imagenSmall4_3}}" alt="">
+                                <img class="img-lista-not-mobile" src="{{imagenSmall}}" alt="">
+                            </div>
+                            <div class="info-evento-card-lista">
+                                <div>
+                                    <div class="categorias-evento">{{categorias}}</div>
+                                    <div class="titulo-evento">{{titulo}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </script>
+                <script id="template-card-evento-cuadrilla" type="x-tmpl-mustache">
+                    <div class="evento-tiempo-libre card-evento-contenedor-cuadrilla" data-rowNumber="{{rowNumber}}">
+                        <div class="card-evento-cuadrilla">
+                            <div>
+                                <a href="{{urlEvento}}" target="_blank">
+                                    <img class="" src="{{imagenSmall}}" alt="">
+                                </a>
+                            </div>
+                            <div class="contenedor-info-evento">
+                                <div class="g">
+                                    <div class="gi one-third">
+                                        <div class="fecha-evento text-center">
+                                            <div class="parte-fecha-evento">{{fechaInicio.mes.nombre}}</div>
+                                            <div class="parte-fecha-evento contenedor-fecha-dia">
+                                                <span class="dia-evento">{{fechaInicio.dia}}</span>
+                                            </div>
+                                            <div class="parte-fecha-evento">{{fechaInicio.hora}}:{{fechaInicio.minuto}}h</div>
+                                        </div>
+                                    </div>
+                                    <div class="gi two-thirds">
+                                        <div class="categorias-evento">{{categorias}}</div>
+                                        <div class="titulo-evento">{{tituloLimited}}</div>
+                                        <div class="resumen-evento">{{resumenLimited}}</div>
+                                        <div class="leer-mas-contenedor text-center">
+                                            <a class="leer-evento-link" href="{{urlEvento}}" target="_blank">Leer más</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </script>
+                <div id="contenedor-cards-eventos" class="wrapper">
+                    <div id="wrapper-cards-eventos">
+                    </div>
+                </div>
+                <div id="contenedor-paginacion-eventos" class="wrapper text-center">
+                    <span>---</span>
+                </div>
+            </div>
+        </form>
+        <script type="text/javascript" src="js/tiempolibre.js"></script>
+    </body>
+</html>

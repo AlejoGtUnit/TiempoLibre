@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Layout Testing</title>
+        <style>
+            .wrapper { max-width:1200px; margin-left:auto; margin-right:auto; }
+            .full-width { width: 100%; }
+            .d-table { display:table; border:1px solid brown; padding-bottom:15px; }
+            .d-table-cell { display:table-cell; float:left; }
+            .cuadrilla-item { width:50%; margin-top:10px; }
+            .evento-card-cuadrilla { border:1px solid grey; margin-left:7px; margin-right:7px; padding-left:7px; padding-right:7px; }
+            
+            /*DESK*/
+            @media only screen and (min-width: 768px) 
+            {
+                .cuadrilla-item { width:33.33%; margin-top:20px; }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Cuadrilla</h1>
+            <div class="d-table full-width">
+                <div class="d-table-cell cuadrilla-item">
+                    <div class="evento-card-cuadrilla">
+                        <div class="full-width">Imagen 1</div>
+                        <div>Algo por aqui, Algo por aqui, Algo por aqui</div>
+                    </div>
+                </div>
+                <div class="d-table-cell cuadrilla-item">
+                    <div class="evento-card-cuadrilla">
+                        <div class="full-width">Imagen 2</div>
+                        <div>Algo por aqui, Algo por aqui, Algo por aqui</div>
+                    </div>
+                </div>
+                <div class="d-table-cell cuadrilla-item">
+                    <div class="evento-card-cuadrilla">
+                        <div class="full-width">Imagen 3</div>
+                        <div>Algo por aqui, Algo por aqui, Algo por aqui</div>
+                    </div>
+                </div>
+                <div class="d-table-cell cuadrilla-item">
+                    <div class="evento-card-cuadrilla">
+                        <div class="full-width">Imagen 4</div>
+                        <div>Algo por aqui, Algo por aqui, Algo por aqui</div>
+                    </div>
+                </div>
+                <div class="d-table-cell cuadrilla-item">
+                    <div class="evento-card-cuadrilla">
+                        <div class="full-width">Imagen 5</div>
+                        <div>Algo por aqui, Algo por aqui, Algo por aqui</div>
+                    </div>
+                </div>
+                <div class="d-table-cell cuadrilla-item">
+                    <div class="evento-card-cuadrilla">
+                        <div class="full-width">Imagen 6</div>
+                        <div>Algo por aqui, Algo por aqui, Algo por aqui</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

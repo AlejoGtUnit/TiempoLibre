@@ -1,0 +1,71 @@
+.full-width { width:100%; }
+.background-white { background-color:#FFF; }
+.background-oscuro { background-color:#ecedef; }
+#contenedor-mayor { padding-top:15px; }
+#contenedor-tipo-visualizacion { padding-top:10px; padding-bottom:10px; padding-right:15px; text-align:right; }
+.text-bold { font-weight:bold; }
+.img-tipo-visualizacion { height:25px; width:auto; margin-right:7px; cursor:pointer; }
+#texto-visualizacion { font-size:13px; margin-right:5px; }
+.display-inline { display:inline; }
+.display-inline-block { display:inline-block; }
+.vertical-top { vertical-align:top; }
+#wrapper-cards-eventos { width:100% !important; } 
+#contenedor-cards-eventos { margin-top:15px; margin-bottom:15px; }
+#contenedor-paginacion { padding:15px 15px 15px 15px; } 
+.text-center { text-align:center; }
+.numero-en-paginacion { cursor:pointer; margin-left:5px; margin-right:5px; }
+.paginacion-actual { color:#3184b8; font-weight:bold; }
+.contenedor-info-evento { margin:10px 5px 0px 5px; padding-bottom:5px;  }
+.categorias-evento { color:#3184b8; font-size:9px; font-weight:800; font-family: "Merriweather Sans" }
+.titulo-evento { color:#3184b8; font-size:13px; font-weight:900; margin-top:4px; }
+.resumen-evento { margin-top:7px; color:#757575; font-size:10px; }
+.leer-mas-contenedor { margin-top:14px; margin-bottom:14px; }
+.leer-evento-link { background-color:#4783b2; color:#FFF; border-radius:25px; padding:6px 15px 6px 15px; font-size:12px; }
+.leer-evento-link:hover { color:black; }
+.fecha-evento { color:#4c4f55; text-align:center; font-size:11px; margin-top:10px; margin-bottom:10px; }
+.contenedor-fecha-dia {  }
+.dia-evento { color:#FFF; text-align:center; font-size:11px; background-color:#7c808b; padding:7px; border-radius:50%;  }
+.parte-fecha-evento { display:inline; }
+
+/*DESK Comun*/
+@media only screen and (min-width: 576px) {
+    #contenedor-tipo-visualizacion { padding-top:30px; padding-bottom:30px;  }
+    #contenedor-cards-eventos {  }
+    .contenedor-info-evento { margin:25px 10px 0px 10px; padding-bottom:25px; }
+    .categorias-evento { font-size:14px; }
+    .titulo-evento { font-size:18px; margin-top:8px; }
+    .resumen-evento { font-size:14px; }
+    .leer-mas-contenedor { margin-top:17px; margin-bottom:17px; }
+    .leer-evento-link { padding:8px 30px 8px 40px; font-size:15px; }
+    .contenedor-fecha-dia { margin-top:25px; margin-bottom:25px; }
+    .fecha-evento { font-size:15px; }
+    .parte-fecha-evento { display:block; }
+    .dia-evento { font-size:20px; padding:16px; }
+}
+
+/*Inicio Cards Eventos Lista*/
+.card-evento-contenedor-lista { width:100%; margin-bottom:15px; }
+.card-evento-lista { width:100%; background-color:#FFF; }
+.contenedor-imagen-lista { width:40%; display:inline-block; border:1px solid blue; }
+.img-lista-mobile { display:inline; vertical-align:top; }
+.img-lista-not-mobile { display:none; }
+.info-evento-card-lista { border:1px solid blue; display:inline-block; padding-left:7px; padding-top:10px; }
+
+/*Desk*/
+@media only screen and (min-width: 576px) {
+    .contenedor-imagen-lista { width:30%; }
+    .img-lista-mobile { display:none; }
+    .img-lista-not-mobile { display:inline; }
+    .info-evento-card-lista { width:68%; padding-left:12px; padding-top:20px; vertical-align:top; }
+}
+/*Fin Cards Eventos Lista*/
+
+/*Inicio Cards Eventos Cuadrilla*/
+.card-evento-contenedor-cuadrilla { width:50%; margin-right:-5px; display:inline-flex; margin-bottom:10px; padding-left:9px; padding-right:9px; }
+.card-evento-cuadrilla { background-color:#FFF; width:100%; border-bottom:1px solid #ceccbf; }
+/*Desk*/
+@media only screen and (min-width: 576px) {
+    .card-evento-contenedor-cuadrilla { width:33.33%; margin-bottom:20px; }
+}
+/*Fin Cards Eventos Cuadrilla*/
+
