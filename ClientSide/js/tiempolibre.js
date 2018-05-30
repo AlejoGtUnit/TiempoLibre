@@ -47,6 +47,7 @@ function obtenerEventos(inicio_in, fin_in)
                 $("#wrapper-cards-eventos").html("");
                 data.eventos.forEach(function(eventoItem, index)
                 {   
+                    //Propiedades agregadas para poder usar en MustacheJS
                     eventoItem.mostrarHoraFinalAlFinal = eventoItem.mostrarFechaFinal && (eventoItem.fechaInicio.sinHora == eventoItem.fechaFinal.sinHora);
                     eventoItem.mostrarFechaFinalPorSeparado = eventoItem.mostrarFechaFinal && (eventoItem.fechaInicio.sinHora != eventoItem.fechaFinal.sinHora);
                     eventoDebug = eventoItem;
