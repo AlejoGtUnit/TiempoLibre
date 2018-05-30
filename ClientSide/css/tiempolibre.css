@@ -12,8 +12,8 @@
 #contenedor-cards-eventos { margin-top:15px; margin-bottom:15px; }
 #contenedor-paginacion-eventos { padding:15px 15px 15px 15px; background-color:#FFF; }
 #wrapper-cards-eventos { }
-.numero-en-paginacion { cursor:pointer; margin-left:5px; margin-right:5px; }
-.paginacion-actual { color:#3184b8; font-weight:bold; }
+.numero-en-paginacion { cursor:pointer; margin-left:5px; margin-right:5px; text-align:center; }
+.paginacion-actual { color:#3184b8; font-weight:bold; text-decoration:underline; }
 
 /*Desk*/
 @media only screen and (min-width: 768px) 
