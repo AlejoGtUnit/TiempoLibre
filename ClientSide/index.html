@@ -25,10 +25,12 @@
                     <img class="img-tipo-visualizacion" src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/ASSETS/scuard.png" title="Cuadrilla" onclick="cuadrila_visualizacion_click();" />
                 </div>
                 <script id="template-card-evento-lista" type="x-tmpl-mustache">
-                    <a class="card-evento-lista" data-rowNumber="{{rowNumber}}" href="{{urlEvento}}" target="_blank">
+                    <div class="card-evento-lista" data-rowNumber="{{rowNumber}}" href="{{urlEvento}}" target="_blank">
                         <div class="card-evento-imagen-lista">
-                            <img class="imagen-evento-lista-mobile" src="{{imagenSmall4_3}}" alt="">
-                            <img class="imagen-evento-lista-desk" src="{{imagenSmall}}" alt="">
+                            <a href="{{urlEvento}}" target="_blank">
+                                <img class="imagen-evento-lista-mobile" src="{{imagenSmall4_3}}" alt="">
+                                <img class="imagen-evento-lista-desk" src="{{imagenSmall}}" alt="">
+                            </a>
                         </div>
                         <div class="card-evento-info-lista">
                             <div class="evento-fecha-lista">
@@ -49,11 +51,32 @@
                                 </div>
                                 {{/mostrarFechaFinalPorSeparado}}
                             </div>
-                            <div class="categorias">{{categorias}}</div>
-                            <div class="titulo">{{titulo}}</div>
-                            <div class="resumen">{{resumen}}</div>
+                            <a href="{{urlEvento}}" target="_blank">
+                                <div class="categorias">{{categorias}}</div>
+                                <div class="titulo">{{titulo}}</div>
+                                <div class="resumen">{{resumen}}</div>
+                            </a>
+                            <div class="compartir">
+                                <span>
+                                    <img class="img-compartir" src="https://s3-us-west-2.amazonaws.com/gnwebprensalibrerootwest/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/ASSETS/share-bt2.png" />
+                                </span>
+                                <span class="opciones-compartir">
+                                    <a href="whatsapp://send?text={{urlEventoCompleta}}" target="_blank">
+                                        <span class="icon icon-whatsapp"></span>
+                                    </a>
+                                    <a href="https://plus.google.com/share?url={{urlEventoCompleta}}" target="_blank">
+                                        <span class="icon icon-googleplus"></span>
+                                    </a>
+                                    <a href="https://twitter.com/intent/tweet?via=prensa_libre&url={{urlEventoCompleta}}" target="_blank">
+                                        <span class="icon icon-twitter"></span>
+                                    </a>
+                                    <a href="http://www.facebook.com/sharer.php?u={{urlEventoCompleta}}" target="_blank">
+                                        <span class="icon icon-facebook"></span>
+                                    </a>
+                                </span>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                 </script>
                 <script id="template-card-evento-cuadrilla" type="x-tmpl-mustache">
                     <div class="" data-rowNumber="{{rowNumber}}">

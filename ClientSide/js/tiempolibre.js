@@ -2,10 +2,10 @@
 var eventosPorPagina = 6;
 
 var urlService = "";
-if (window.location.href.indexOf("www.prensalibre.com") > -1)
-    urlService = "http://gnw.prensalibre.com/PL-Test/TiempoLibreService";
+if (window.location.href.indexOf("gnw.prensalibre.com") > -1)
+    urlService = "//gnw.prensalibre.com/TiempoLibreService";
 else
-    urlService = "http://gnw.prensalibre.com/PL-Test/TiempoLibreService";
+    urlService = "//www.prensalibre.com/TiempoLibreService";
 
 var templateCardEventoLista = $('#template-card-evento-lista').html();
 Mustache.parse(templateCardEventoLista);
@@ -15,6 +15,9 @@ Mustache.parse(templateCardEventoCuadrilla);
 
 $(document).ready(function()
 {
+    if (!console)
+        alert("!console");
+    
     console.log("tiempolibre.js document.ready!");
     
     var visualizacion = $.cookie("visualizacion");
