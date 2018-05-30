@@ -31,22 +31,24 @@
                             <img class="imagen-evento-lista-desk" src="{{imagenSmall}}" alt="">
                         </div>
                         <div class="card-evento-info-lista">
-                            <div class="fecha-inicio">
-                                <span>{{fechaInicio.mes.nombre}}</span>
-                                <span>{{fechaInicio.dia}}</span>
-                                <span>{{fechaInicio.hora}}:{{fechaInicio.minuto}}h</span>
-                                {{#mostrarHoraFinalAlFinal}}
-                                <span> | {{ fechaFinal.hora}}:{{fechaFinal.minuto}}h</span>
-                                {{/mostrarHoraFinalAlFinal}}
+                            <div class="evento-fecha-lista">
+                                <div class="fecha-inicio">
+                                    <span>{{fechaInicio.mes.nombre}}</span>
+                                    <span class="dia">{{fechaInicio.dia}}</span>
+                                    <span>{{fechaInicio.hora}}:{{fechaInicio.minuto}}h</span>
+                                    {{#mostrarHoraFinalAlFinal}}
+                                    <span> | {{ fechaFinal.hora}}:{{fechaFinal.minuto}}h</span>
+                                    {{/mostrarHoraFinalAlFinal}}
+                                </div>
+                                {{#mostrarFechaFinalPorSeparado}}
+                                <span id="separacionFechas">-</span>
+                                <div class="fecha-fin">
+                                    <span>{{fechaFinal.mes.nombre}}</span>
+                                    <span class="dia">{{fechaFinal.dia}}</span>
+                                    <span>{{fechaFinal.hora}}:{{fechaFinal.minuto}}h</span>
+                                </div>
+                                {{/mostrarFechaFinalPorSeparado}}
                             </div>
-                            {{#mostrarFechaFinalPorSeparado}}
-                            <span id="separacionFechas">-</span>
-                            <div class="fecha-fin">
-                                <span>{{fechaFinal.mes.nombre}}</span>
-                                <span>{{fechaFinal.dia}}</span>
-                                <span>{{fechaFinal.hora}}:{{fechaFinal.minuto}}h</span>
-                            </div>
-                            {{/mostrarFechaFinalPorSeparado}}
                             <div class="categorias">{{categorias}}</div>
                             <div class="titulo">{{titulo}}</div>
                             <div class="resumen">{{resumen}}</div>
