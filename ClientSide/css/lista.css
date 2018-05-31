@@ -1,5 +1,5 @@
 /*Inicio Lista*/
-.card-evento-lista { display:table; width:100%; background-color:#FFF; margin-top:7px; }
+.card-evento-lista { display:table; width:100%; background-color:#FFF; margin-top:10px; }
 .card-evento-lista:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 .card-evento-imagen-lista { display:table-cell; width:45%; vertical-align: middle; }
 .card-evento-info-lista { display:table-cell; width:55%; vertical-align:top; padding:5px 5px; }
@@ -18,7 +18,7 @@
 
 /*DESK*/
 @media only screen and (min-width: 768px) {
-    .card-evento-lista { margin-top:12px; }
+    .card-evento-lista { margin-top:18px; }
     .card-evento-imagen-lista { display:table-cell; width:33.3%; vertical-align:top; }
     .card-evento-info-lista { display:table-cell; width:66.6%; padding:20px 15px 12px 30px; }
     .imagen-evento-lista-mobile { display:none; }
