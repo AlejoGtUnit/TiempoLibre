@@ -5,7 +5,7 @@ var urlService = "";
 if (window.location.href.indexOf("gnw.prensalibre.com") > -1)
     urlService = "//gnw.prensalibre.com/TiempoLibreService";
 else
-    urlService = "//www.prensalibre.com/TiempoLibreService";
+    urlService = "//gnw.prensalibre.com/TiempoLibreService";
 
 var templateCardEventoLista = $('#template-card-evento-lista').html();
 Mustache.parse(templateCardEventoLista);
@@ -66,6 +66,17 @@ function obtenerEventos(inicio_in, fin_in)
     })
     .always(function() {
         console.log("obtenerEventos->always!");
+        
+        $(".card-evento-info-lista .img-compartir").on('click', function(){
+            var cardEventoListaPadre = $(this).parents(".card-evento-lista");
+            if (cardEventoListaPadre != undefined && cardEventoListaPadre){
+                var rowNumber = cardEventoListaPadre.data("rownumber");
+                if (rowNumber != undefined && rowNumber)
+                {
+                    $(".card-evento-lista[data-rownumber=" + rowNumber + "] .opciones-compartir").toggle();
+                }
+            }
+        });
     });
 }
 

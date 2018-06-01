@@ -12,9 +12,11 @@
 .evento-fecha-lista { margin:3px auto; text-align:center; }
 .evento-fecha-lista .dia { display:inline-block; color:#FFF; background-color:#7c808b; border-radius:50%; text-align:center; vertical-align:middle; font-size:12px; width:20px; height:20px; padding-top:2px; }
 .card-evento-info-lista .compartir { margin-top:5px; margin-left:10px; }
-.card-evento-info-lista .img-compartir { width:15px; height:auto; }
-.card-evento-info-lista .opciones-compartir { margin-left: 10px; }
+.card-evento-info-lista .img-compartir { width:15px; height:auto; cursor:pointer; }
+.card-evento-info-lista .opciones-compartir { margin-left: 10px; display:none; }
 .card-evento-info-lista .opciones-compartir .icon { font-size:22px; margin:auto 3px; }
+.card-evento-info-lista .leer-mas-y-compartir { margin-top:5px; }
+.card-evento-info-lista .leer-mas-y-compartir .leer-mas { display:none; }
 
 /*DESK*/
 @media only screen and (min-width: 768px) {
@@ -29,6 +31,8 @@
     .card-evento-info-lista .categorias { display:block; font-weight:bold; font-size:15px; margin-top:10px; }
     .card-evento-info-lista .titulo { font-size:22px; }
     .card-evento-info-lista .resumen { color:#757575; font-size:15px; }
+    .card-evento-info-lista .leer-mas-y-compartir { margin-top:20px; }
+    .card-evento-info-lista .leer-mas-y-compartir .leer-mas { display:inline; background-color:#4783b2; color:#FFF; padding:10px 30px; border-radius:25px; }
     .card-evento-info-lista .compartir { margin-top:15px; }
     .card-evento-info-lista .img-compartir { width:25px; }
     .card-evento-info-lista .opciones-compartir { margin-left: 10px; }
