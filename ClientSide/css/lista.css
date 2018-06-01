@@ -15,6 +15,7 @@
 .card-evento-info-lista .img-compartir { width:15px; height:auto; cursor:pointer; }
 .card-evento-info-lista .opciones-compartir { margin-left: 10px; display:none; }
 .card-evento-info-lista .opciones-compartir .icon { font-size:22px; margin:auto 3px; }
+.card-evento-info-lista .opciones-compartir .icon-whatsapp { display:inline; }
 .card-evento-info-lista .leer-mas-y-compartir { margin-top:5px; }
 .card-evento-info-lista .leer-mas-y-compartir .leer-mas { display:none; }
 
@@ -37,5 +38,6 @@
     .card-evento-info-lista .img-compartir { width:25px; margin-left:25px; }
     .card-evento-info-lista .opciones-compartir { margin-left: 10px; }
     .card-evento-info-lista .opciones-compartir .icon { font-size:25px; margin:auto 5px; }
+    .card-evento-info-lista .opciones-compartir .icon-whatsapp { display:none; }
 }
 /*Fin Lista*/
