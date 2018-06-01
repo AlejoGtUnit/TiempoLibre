@@ -12,9 +12,9 @@
 .evento-fecha-lista { margin:3px auto; text-align:center; }
 .evento-fecha-lista .dia { display:inline-block; color:#FFF; background-color:#7c808b; border-radius:50%; text-align:center; vertical-align:middle; font-size:12px; width:20px; height:20px; padding-top:2px; }
 .card-evento-info-lista .compartir { margin-top:5px; margin-left:10px; }
-.card-evento-info-lista .img-compartir { width:15px; height:auto; cursor:pointer; }
-.card-evento-info-lista .opciones-compartir { margin-left: 10px; display:none; }
-.card-evento-info-lista .opciones-compartir .icon { font-size:22px; margin:auto 3px; }
+.card-evento-info-lista .img-compartir { width:20px; height:auto; cursor:pointer; }
+.card-evento-info-lista .opciones-compartir { margin-left: 5px; display:none; }
+.card-evento-info-lista .opciones-compartir .icon { font-size:25px; margin:auto 2px; }
 .card-evento-info-lista .opciones-compartir .icon-whatsapp { display:inline; }
 .card-evento-info-lista .leer-mas-y-compartir { margin-top:5px; }
 .card-evento-info-lista .leer-mas-y-compartir .leer-mas { display:none; }
