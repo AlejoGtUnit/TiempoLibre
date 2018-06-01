@@ -34,7 +34,7 @@
     .card-evento-info-lista .leer-mas-y-compartir { margin-top:20px; }
     .card-evento-info-lista .leer-mas-y-compartir .leer-mas { display:inline; background-color:#4783b2; color:#FFF; padding:10px 30px; border-radius:25px; }
     .card-evento-info-lista .compartir { margin-top:15px; }
-    .card-evento-info-lista .img-compartir { width:25px; }
+    .card-evento-info-lista .img-compartir { width:25px; margin-left:25px; }
     .card-evento-info-lista .opciones-compartir { margin-left: 10px; }
     .card-evento-info-lista .opciones-compartir .icon { font-size:25px; margin:auto 5px; }
 }
