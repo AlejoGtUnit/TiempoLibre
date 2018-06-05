@@ -1,7 +1,37 @@
 /*Inicio Cuadrilla*/
+#wrapper-cards-eventos { display:flex; flex-direction:row; flex-wrap:wrap; }
+
+.card-evento-cuadrilla { width:50.0%; padding:5px 5px; margin-top:15px; }
+.card-evento-cuadrilla .internal { background-color:#FFF; }
+.card-evento-cuadrilla .internal:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+.card-evento-cuadrilla .img-evento { width:100%; height:auto; }
+.card-evento-cuadrilla .info-evento { padding:10px 5px; display:flex; flex-wrap:wrap; }
+.card-evento-cuadrilla .fechas-evento { width:100%; color:#4c4f55; font-size:12px; text-align:center; }
+.card-evento-cuadrilla .parte-fecha { display:inline; }
+.card-evento-cuadrilla .dia { color:#FFF; background-color:#7c808b; width:20px; height:20px; margin-left:auto; margin-right:auto; border-radius:50%; display:inline-block; padding-top:1px; } 
+.card-evento-cuadrilla #separadorHoras { display:inline-block; }
+.card-evento-cuadrilla .fecha-final { margin-top:5px; }
+.card-evento-cuadrilla .img-compartir-mobile { width:25px; margin-top:7px; cursor:pointer; display:inline-block; }
+.card-evento-cuadrilla .img-compartir-desk { width:25px; margin-top:7px; cursor:pointer; display:none; }
+.card-evento-cuadrilla .texto-evento { width:100%; padding:0 5px; }
+.card-evento-cuadrilla .texto-evento .categorias { color:#4783b2; font-family:"Merriweather Sans"; font-weight:bold; font-size:10px; }
+.card-evento-cuadrilla .texto-evento .titulo { color:#4783b2; font-size:14px; font-weight:900; margin-top:5px;  }
+.card-evento-cuadrilla .texto-evento .resumen { color:#757575; font-size:12px; margin-top:5px; }
 
 /*DESK*/
-@media only screen and (min-width: 576px) {
-
+@media only screen and (min-width: 768px) 
+{
+    .card-evento-cuadrilla { width:33.3%; padding:10px 10px; margin-top:10px; }
+    .card-evento-cuadrilla .info-evento { padding:20px 10px; }
+    .card-evento-cuadrilla .fechas-evento { width:25%; font-size:14px; }
+    .card-evento-cuadrilla .parte-fecha { display:block; }
+    .card-evento-cuadrilla .dia { width:35px; height:35px; padding-top: 7px; }
+    .card-evento-cuadrilla #separadorHoras { display:none; }
+    .card-evento-cuadrilla .texto-evento { width:75%; padding:0 7px; }
+    .card-evento-cuadrilla .texto-evento .categorias { font-size:12px; }
+    .card-evento-cuadrilla .texto-evento .titulo { color:#4783b2; font-size:18px; margin-top:5px; }
+    .card-evento-cuadrilla .texto-evento .resumen { font-size:15px; margin-top:7px; }
+    .card-evento-cuadrilla .img-compartir-mobile { display:none; }
+    .card-evento-cuadrilla .img-compartir-desk { display:inline-block; }
 }
 /*Fin Cuadrilla*/

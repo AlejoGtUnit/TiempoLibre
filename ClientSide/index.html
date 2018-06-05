@@ -82,32 +82,41 @@
                     </div>
                 </script>
                 <script id="template-card-evento-cuadrilla" type="x-tmpl-mustache">
-                    <div class="" data-rowNumber="{{rowNumber}}">
-                        <div class="">
-                            <div>
-                                <a href="{{urlEvento}}" target="_blank">
-                                    <img class="" src="{{imagenSmall}}" alt="">
-                                </a>
-                            </div>
-                            <div class="">
-                                <div class="g">
-                                    <div class="gi one-third">
-                                        <div class="">
-                                            <div class="">{{fechaInicio.mes.nombre}}</div>
-                                            <div class="">
-                                                <span class="">{{fechaInicio.dia}}</span>
-                                            </div>
-                                            <div class="">{{fechaInicio.hora}}:{{fechaInicio.minuto}}h</div>
-                                        </div>
+                    <div class="card-evento-cuadrilla" data-rowNumber="{{rowNumber}}">
+                        <div class="internal">
+                            <a href="{{urlEvento}}" target="_blank">
+                                <img class="img-evento" src="{{imagenSmall}}" alt="">
+                            </a>
+                            <div class="info-evento">
+                                <div class="fechas-evento">
+                                    <div class="fecha-inicio">
+                                        <span class="parte-fecha">{{fechaInicio.mes.nombre}}</span>
+                                        <span class="parte-fecha dia">{{fechaInicio.dia}}</span>
+                                        <span class="parte-fecha">{{fechaInicio.hora}}:{{fechaInicio.minuto}}h</span>
+                                        {{#mostrarHoraFinalAlFinal}}
+                                        <span id="separadorHoras">-</span>
+                                        <span class="parte-fecha">{{fechaFinal.hora}}:{{fechaFinal.minuto}}h</span>
+                                        {{/mostrarHoraFinalAlFinal}}
                                     </div>
-                                    <div class="gi two-thirds">
-                                        <div class="">{{categorias}}</div>
-                                        <div class="">{{tituloLimited}}</div>
-                                        <div class="">{{resumenLimited}}</div>
-                                        <div class="">
-                                            <a class="" href="{{urlEvento}}" target="_blank">Leer más</a>
-                                        </div>
+                                    {{#mostrarFechaFinalPorSeparado}}
+                                    <div class="fecha-final">
+                                        <span class="parte-fecha">{{fechaFinal.mes.nombre}}</span>
+                                        <span class="parte-fecha dia">{{fechaFinal.dia}}</span>
+                                        <span class="parte-fecha">{{fechaFinal.hora}}:{{fechaFinal.minuto}}h</span>
                                     </div>
+                                    {{/mostrarFechaFinalPorSeparado}}
+                                    <img class="img-compartir-desk" src="https://s3-us-west-2.amazonaws.com/gnwebprensalibrerootwest/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/ASSETS/share-bt2.png" />
+                                </div>
+                                <div class="texto-evento">
+                                    <a href="{{urlEvento}}">
+                                        <div class="categorias">{{categorias}}</div>
+                                        <div class="titulo">{{tituloLimited}}</div>
+                                        <div class="resumen">{{resumenLimited}}</div>
+                                    </a>
+                                    <img class="img-compartir-mobile" src="https://s3-us-west-2.amazonaws.com/gnwebprensalibrerootwest/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/ASSETS/share-bt2.png" />
+                                    <!--<div>
+                                        <a href="{{urlEvento}}" target="_blank">Leer más</a>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
