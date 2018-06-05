@@ -114,9 +114,20 @@
                                         <div class="resumen">{{resumenLimited}}</div>
                                     </a>
                                     <img class="img-compartir-mobile" src="https://s3-us-west-2.amazonaws.com/gnwebprensalibrerootwest/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/ASSETS/share-bt2.png" />
-                                    <!--<div>
-                                        <a href="{{urlEvento}}" target="_blank">Leer más</a>
-                                    </div>-->
+                                    <span class="opciones-compartir">
+                                        <a href="whatsapp://send?text={{urlEventoCompleta}}" target="_blank">
+                                            <span class="icon icon-whatsapp"></span>
+                                        </a>
+                                        <a href="http://www.facebook.com/sharer.php?u={{urlEventoCompleta}}" target="_blank">
+                                            <span class="icon icon-facebook"></span>
+                                        </a>
+                                        <a href="https://plus.google.com/share?url={{urlEventoCompleta}}" target="_blank">
+                                            <span class="icon icon-googleplus"></span>
+                                        </a>
+                                        <a href="https://twitter.com/intent/tweet?via=prensa_libre&url={{urlEventoCompleta}}" target="_blank">
+                                            <span class="icon icon-twitter"></span>
+                                        </a>
+                                    </span>
                                 </div>
                             </div>
                         </div>
