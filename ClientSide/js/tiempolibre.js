@@ -73,7 +73,18 @@ function obtenerEventos(inicio_in, fin_in)
                 var rowNumber = cardEventoListaPadre.data("rownumber");
                 if (rowNumber != undefined && rowNumber)
                 {
-                    $(".card-evento-lista[data-rownumber=" + rowNumber + "] .opciones-compartir").toggle();
+                    $(".card-evento-lista[data-rownumber=" + rowNumber + "] .opciones-compartir").toggle(350);
+                }
+            }
+        });
+        
+        $(".card-evento-cuadrilla .img-compartir-mobile,.img-compartir-desk").on('click', function(){
+            var cardEventoCuadrillaPadre = $(this).parents(".card-evento-cuadrilla");
+            if (cardEventoCuadrillaPadre != undefined && cardEventoCuadrillaPadre){
+                var rowNumber = cardEventoCuadrillaPadre.data("rownumber");
+                if (rowNumber != undefined && rowNumber)
+                {
+                    $(".card-evento-cuadrilla[data-rownumber=" + rowNumber + "] .opciones-compartir").toggle(350);
                 }
             }
         });
