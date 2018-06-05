@@ -12,7 +12,7 @@
 #contenedor-cards-eventos { margin-top:15px; margin-bottom:15px; }
 #contenedor-paginacion-eventos { padding:15px 15px 15px 15px; background-color:#FFF; }
 #wrapper-cards-eventos { }
-.numero-en-paginacion { cursor:pointer; margin-left:5px; margin-right:5px; text-align:center; }
+.numero-en-paginacion { cursor:pointer; margin-left:5px; margin-right:5px; text-align:center; font-size:18px; }
 .paginacion-actual { color:#3184b8; font-weight:bold; text-decoration:underline; }
 .icon-whatsapp { color:#25D366; }
 .icon-googleplus { color:#D50F25; }
