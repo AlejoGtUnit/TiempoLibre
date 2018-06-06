@@ -1,5 +1,6 @@
 /*Inicio JS Eventos - Agenda - Tiempo Libre*/
 var eventosPorPagina = 6;
+var urlsCategorias = ["cine-y-teatro","actividades-familiares","conciertos", "deportes", "expediciones-y-viajes", "gastronomia", "exposiciones-y-convenciones","vida-noctura"];
 
 var urlService = "";
 if (window.location.href.indexOf("gnw.prensalibre.com") > -1)
