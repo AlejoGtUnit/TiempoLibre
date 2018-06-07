@@ -161,4 +161,8 @@ function remostrarCardEventosCargados()
         paginacion_click(spanPaginaActual);
     }
 }
+
+$("#nav-tiempo-libre #mas-opciones, #sub-nav-tiempo-libre #ocultar span, #nav-tiempo-libre #mas-opciones-mobile").on('click',function(){
+   $("#sub-nav-tiempo-libre").toggle();
+});
 /*Fin JS Eventos - Agenda - Tiempo Libre*/

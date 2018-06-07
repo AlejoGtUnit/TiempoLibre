@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/tiempolibre.css"> 
         <link rel="stylesheet" href="css/lista.css?v=0.1">
         <link rel="stylesheet" href="css/cuadrilla.css?v=0.1">
+        <link rel="stylesheet" href="css/nav.css">
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
         <!--<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
         <script type="text/javascript" src="https://www.prensalibre.com/CMSScripts/jquery/jquery-cookie.js"></script>
@@ -129,23 +130,59 @@
                 </div>
             </div>
         </script>
-        <form>
-            <div id="contenedor-mayor-modulo-eventos" class="full-width">
-                <div id="contenedor-tipo-visualizacion" class="wrapper" data-visualizacion="lista">
-                    <p id="texto-visualizacion" class="display-inline text-bold">Visualización</p>
-                    <img class="img-tipo-visualizacion" src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/ASSETS/burger-black.png" title="Lista" onclick="lista_visualizacion_click();" />
-                    <img class="img-tipo-visualizacion" src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/ASSETS/scuard.png" title="Cuadrilla" onclick="cuadrila_visualizacion_click();" />
-                </div>
-                <div id="contenedor-cards-eventos" class="wrapper">
-                    <div id="wrapper-cards-eventos">
-                        
+        <nav id="nav-tiempo-libre">
+            <div class="wrapper">
+                <a href="/TiempoLibre">
+                    <img id="img-logo" src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/ASSETS/TiempoLibre.png">
+                </a>
+                <span id="opciones-default">
+                    <a href="/TiempoLibre/Conciertos">Conciertos</a>
+                    <a href="/TiempoLibre/Deportes">Deportes</a>
+                    <a href="/TiempoLibre/Cine-y-teatro">Cine y teatro</a>
+                    <a href="/TiempoLibre/Actividades-familiares">Familiares</a>
+                    <img id="mas-opciones" src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/ASSETS/mas.png" />
+                </span>
+                <span>
+                    <img id="mas-opciones-mobile" src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/RecorramosGuate/burger.png" />
+                </span>
+            </div>
+        </nav>
+        <nav id="sub-nav-tiempo-libre">
+            <div class="wrapper">
+                <a class="solo-mobile" href="/TiempoLibre/Conciertos">Conciertos</a>
+                <a class="solo-mobile" href="/TiempoLibre/Deportes">Deportes</a>
+                <a class="solo-mobile" href="/TiempoLibre/Cine-y-teatro">Cine y teatro</a>
+                <a class="solo-mobile" href="/TiempoLibre/Actividades-familiares">Familiares</a>
+                <a href="/TiempoLibre/Expediciones-y-viajes">Expediciones y viajes</a>
+                <a href="/TiempoLibre/Gastronomia">Gastronomia</a>
+                <a href="/TiempoLibre/Exposiciones-y-convenciones">Exposiciones y convenciones</a>
+                <a href="/TiempoLibre/Vida-nocturna">Vida noctura</a>
+            </div>
+            <div id="ocultar" class="wrapper">
+                <span>
+                    <img src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/RecorramosGuate/arrow.png" /> Ocultar
+                </span>
+            </div>
+        </nav>
+        <main id="main-contenedor">
+            <form>
+                <div id="contenedor-mayor-modulo-eventos" class="full-width">
+                    <div id="contenedor-tipo-visualizacion" class="wrapper" data-visualizacion="lista">
+                        <p id="texto-visualizacion" class="display-inline text-bold">Visualización</p>
+                        <img class="img-tipo-visualizacion" src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/ASSETS/burger-black.png" title="Lista" onclick="lista_visualizacion_click();" />
+                        <img class="img-tipo-visualizacion" src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/ASSETS/scuard.png" title="Cuadrilla" onclick="cuadrila_visualizacion_click();" />
+                    </div>
+                    <div id="contenedor-cards-eventos" class="wrapper">
+                        <div id="wrapper-cards-eventos">
+
+                        </div>
+                    </div>
+                    <div id="contenedor-paginacion-eventos" class="wrapper text-center">
+                        <span>---</span>
                     </div>
                 </div>
-                <div id="contenedor-paginacion-eventos" class="wrapper text-center">
-                    <span>---</span>
-                </div>
-            </div>
-        </form>
-        <script type="text/javascript" src="js/tiempolibre.js?v=002"></script>
+            </form>
+        </main>
+        <script type="text/javascript" src="js/tiempolibre.js?v=003"></script>
     </body>
 </html>
