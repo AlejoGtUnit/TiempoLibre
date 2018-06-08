@@ -11,7 +11,7 @@
 .card-evento-cuadrilla .dia { color:#FFF; background-color:#7c808b; width:20px; height:20px; margin-left:auto; margin-right:auto; border-radius:50%; display:inline-block; padding-top:1px; } 
 .card-evento-cuadrilla #separadorHoras { display:inline-block; }
 .card-evento-cuadrilla .fecha-final { margin-top:5px; }
-.card-evento-cuadrilla .img-compartir-mobile { width:25px; cursor:pointer; display:inline-block; float:right; }
+.card-evento-cuadrilla .img-compartir-mobile { width:25px; cursor:pointer; display:inline-block; }
 .card-evento-cuadrilla .img-compartir-desk { width:25px; margin-top:7px; cursor:pointer; display:none; }
 .card-evento-cuadrilla .texto-evento { width:100%; padding:0 5px; }
 .card-evento-cuadrilla .texto-evento .categorias { color:#4783b2; font-family:"Merriweather Sans"; font-weight:bold; font-size:10px; }
@@ -20,7 +20,7 @@
 .card-evento-cuadrilla .opciones-compartir { margin-top:7px; display:none; text-align:center; }
 .card-evento-cuadrilla .opciones-compartir .icon { font-size:28px; }
 .card-evento-cuadrilla .leer-mas { display:inline-block; background-color:#4783b2; color:#FFF; padding:5px 10px; font-size:12px; border-radius:25px;  }
-.card-evento-cuadrilla .leer-mas-img-compartir-mobile { margin-top:10px; } 
+.card-evento-cuadrilla .leer-mas-img-compartir-mobile { margin-top:10px; text-align:right; } 
 .card-evento-cuadrilla .icon-whatsapp { display:inline; }
 
 /*DESK*/
