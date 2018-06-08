@@ -1,6 +1,30 @@
 /*Inicio JS Eventos - Agenda - Tiempo Libre*/
 var eventosPorPagina = 6;
-var urlsCategorias = ["cine-y-teatro","actividades-familiares","conciertos", "deportes", "expediciones-y-viajes", "gastronomia", "exposiciones-y-convenciones","vida-noctura"];
+var urlsCategorias = 
+[   
+    { "patron": "/tiempolibre/cine-y-teatro", "codigo": 1 },
+    { "patron": "/tiempolibre/actividades-familiares", "codigo": 2 },
+    { "patron": "/tiempolibre/conciertos", "codigo": 3},
+    { "patron": "/tiempolibre/deportes", "codigo": 4 },
+    { "patron": "/tiempolibre/expediciones-y-viajes", "codigo":5 },
+    { "patron": "/tiempolibre/gastronomia", "codigo":6 },
+    { "patron": "/tiempolibre/exposiciones-y-convenciones", "codigo":7 },
+    { "patron": "/tiempolibre/vida-nocturna", "codigo":8 }
+];
+
+function obtenerCodigoCategoria()
+{
+    var resultado = "";
+    var href = window.location.href.toLowerCase();
+    var categoria = urlsCategorias.find(function(item){
+        return (href.indexOf(item.patron) > -1);
+    });
+    
+    if (categoria != undefined && categoria){
+        resultado = categoria.codigo;
+    }
+    return resultado;
+}
 
 var urlService = "";
 if (window.location.href.indexOf("gnw.prensalibre.com") > -1)
@@ -35,7 +59,7 @@ $(document).ready(function()
 
 function obtenerEventos(inicio_in, fin_in)
 {
-    var jqxhr = $.get(urlService, { inicio: inicio_in, fin: fin_in  })
+    var jqxhr = $.get(urlService, { inicio: inicio_in, fin: fin_in, categoria:obtenerCodigoCategoria() })
     .done(function(data) {
         if (data)
         {
@@ -59,6 +83,11 @@ function obtenerEventos(inicio_in, fin_in)
                     var htmlNuevoCardsEventos = obtenerHtmlCardEvento(eventoItem);
                     $("#wrapper-cards-eventos").html(htmlActualCardsEventos + htmlNuevoCardsEventos);
                 });
+            }
+            else
+            {
+                $("#wrapper-cards-eventos").html("No existen eventos por el momento.");
+                $("#contenedor-paginacion-eventos").hide();
             }
         }
     })
@@ -169,5 +198,5 @@ $("#nav-tiempo-libre #mas-opciones, #sub-nav-tiempo-libre #ocultar span, #nav-ti
 $("#nav-tiempo-libre #opciones-default a, #sub-nav-tiempo-libre a").each(function(a,b) { 
     if (b.href.toLowerCase() == window.location.href.toLowerCase())
       $(b).addClass("active");
-  });
+});
 /*Fin JS Eventos - Agenda - Tiempo Libre*/
