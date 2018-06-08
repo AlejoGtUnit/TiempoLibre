@@ -14,6 +14,8 @@
 #sub-nav-tiempo-libre .solo-mobile { display:inherit; }
 #nav-tiempo-libre #mas-opciones-mobile { display:inherit; height:30px; float:right; cursor:pointer; margin-right:15px; }
 #main-contenedor { margin-top:var(--nav-height-mobile); }
+#nav-tiempo-libre #opciones-default a.active { text-decoration:underline !important; }
+#sub-nav-tiempo-libre a.active { text-decoration:underline !important; }
 
 /*Inicio DESK*/
 @media only screen and (min-width: 768px) 
