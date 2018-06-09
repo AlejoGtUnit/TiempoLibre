@@ -16,6 +16,8 @@
 #main-contenedor { margin-top:var(--nav-height-mobile); }
 #nav-tiempo-libre #opciones-default a.active { text-decoration:underline !important; }
 #sub-nav-tiempo-libre a.active { text-decoration:underline !important; }
+#sub-nav-tiempo-libre #regresar-prensa-libre { float: right; margin-right: 5px; }
+#sub-nav-tiempo-libre .icon-home { margin-top:-6px !important; font-size:22px; }
 
 /*Inicio DESK*/
 @media only screen and (min-width: 768px) 
