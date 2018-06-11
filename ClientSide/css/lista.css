@@ -11,8 +11,8 @@
 .card-evento-info-lista .fecha-inicio, .fecha-fin { display:inline; color:#4c4f55; font-size:10px; }
 .evento-fecha-lista { margin:3px auto; text-align:center; }
 .evento-fecha-lista .dia { display:inline-block; color:#FFF; background-color:#7c808b; border-radius:50%; text-align:center; vertical-align:middle; font-size:12px; width:20px; height:20px; padding-top:2px; }
-.card-evento-info-lista .compartir { margin-top:5px; margin-left:10px; }
-.card-evento-info-lista .img-compartir { width:20px; height:auto; cursor:pointer; }
+.card-evento-info-lista .compartir { margin-top:5px; }
+.card-evento-info-lista .img-compartir { font-size:21px; cursor:pointer; color:#4783b2; }
 .card-evento-info-lista .opciones-compartir { margin-left: 5px; display:none; }
 .card-evento-info-lista .opciones-compartir .icon { font-size:25px; margin:auto 2px; }
 .card-evento-info-lista .opciones-compartir .icon-whatsapp { display:inline; }
@@ -35,7 +35,7 @@
     .card-evento-info-lista .leer-mas-y-compartir { margin-top:20px; }
     .card-evento-info-lista .leer-mas-y-compartir .leer-mas { display:inline; background-color:#4783b2; color:#FFF; padding:10px 30px; border-radius:25px; }
     .card-evento-info-lista .compartir { margin-top:15px; }
-    .card-evento-info-lista .img-compartir { width:25px; margin-left:25px; }
+    .card-evento-info-lista .img-compartir { margin-left:5px; }
     .card-evento-info-lista .opciones-compartir { margin-left: 10px; }
     .card-evento-info-lista .opciones-compartir .icon { font-size:25px; margin:auto 5px; }
     .card-evento-info-lista .opciones-compartir .icon-whatsapp { display:none; }
