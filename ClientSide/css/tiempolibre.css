@@ -8,7 +8,7 @@
 #contenedor-mayor-modulo-eventos { background-color:#ecedef; }
 #contenedor-tipo-visualizacion { padding-top:10px; padding-bottom:10px; padding-right:15px; text-align:right; background-color:#FFF; }
 #texto-visualizacion { font-size:13px; margin-right:5px; }
-.img-tipo-visualizacion { font-size:30px; margin-right:7px; cursor:pointer; vertical-align:middle; }
+.img-tipo-visualizacion { font-size:30px; margin-right:7px; cursor:pointer; vertical-align:middle; color:#2c3240; }
 #contenedor-cards-eventos { margin-top:15px; margin-bottom:15px; }
 #contenedor-paginacion-eventos { padding:15px 15px 15px 15px; background-color:#FFF; }
 #wrapper-cards-eventos { }
