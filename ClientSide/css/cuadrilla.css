@@ -11,8 +11,8 @@
 .card-evento-cuadrilla .dia { color:#FFF; background-color:#7c808b; width:20px; height:20px; margin-left:auto; margin-right:auto; border-radius:50%; display:inline-block; padding-top:1px; } 
 .card-evento-cuadrilla #separadorHoras { display:inline-block; }
 .card-evento-cuadrilla .fecha-final { margin-top:5px; }
-.card-evento-cuadrilla .img-compartir-mobile { width:25px; cursor:pointer; display:inline-block; }
-.card-evento-cuadrilla .img-compartir-desk { width:25px; margin-top:7px; cursor:pointer; display:none; }
+.card-evento-cuadrilla .img-compartir-mobile { font-size:25px; cursor:pointer; display:inline-block; color:#4783b2; }
+.card-evento-cuadrilla .img-compartir-desk { font-size:25px; margin-top:7px; cursor:pointer; display:none; color:#4783b2; }
 .card-evento-cuadrilla .texto-evento { width:100%; padding:0 5px; }
 .card-evento-cuadrilla .texto-evento .categorias { color:#4783b2; font-family:"Merriweather Sans"; font-weight:bold; font-size:10px; }
 .card-evento-cuadrilla .texto-evento .titulo { color:#4783b2; font-size:14px; font-weight:900; margin-top:5px;  }
