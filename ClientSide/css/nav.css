@@ -12,7 +12,7 @@
 #sub-nav-tiempo-libre #ocultar { border-top:2px solid #353a4b; padding-left:10px; } 
 #sub-nav-tiempo-libre #ocultar span { margin-top:12px; cursor:pointer; display:inline-block; }
 #sub-nav-tiempo-libre .solo-mobile { display:inherit; }
-#nav-tiempo-libre #mas-opciones-mobile { display:inherit; height:30px; float:right; cursor:pointer; margin-right:15px; }
+#nav-tiempo-libre #mas-opciones-mobile { display:inherit; height:30px; float:right; cursor:pointer; margin-right:15px; margin-top:10px; }
 #main-contenedor { margin-top:var(--nav-height-mobile); }
 #nav-tiempo-libre #opciones-default a.active { text-decoration:underline !important; }
 #sub-nav-tiempo-libre a.active { text-decoration:underline !important; }
@@ -23,7 +23,7 @@
 @media only screen and (min-width: 768px) 
 {
     #nav-tiempo-libre { min-height:var(--nav-height-desk); }
-    #nav-tiempo-libre #img-logo { width: 400px; }
+    #nav-tiempo-libre #img-logo { width:auto; }
     #nav-tiempo-libre #opciones-default { display:inherit; float:right; cursor:pointer; }
     #nav-tiempo-libre #opciones-default a { margin-left:15px; }
     #nav-tiempo-libre #mas-opciones { margin-left:15px; margin-top:-3px; }
