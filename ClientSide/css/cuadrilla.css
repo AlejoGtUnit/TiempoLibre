@@ -5,7 +5,7 @@
 .card-evento-cuadrilla .internal { background-color:#FFF; }
 .card-evento-cuadrilla .internal:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 .card-evento-cuadrilla .img-evento { width:100%; height:auto; }
-.card-evento-cuadrilla .info-evento { padding:10px 5px; display:flex; flex-wrap:wrap; }
+.card-evento-cuadrilla .info-evento { padding:10px 5px; display:flex; flex-wrap:wrap; min-height:200px; }
 .card-evento-cuadrilla .fechas-evento { width:100%; color:#4c4f55; font-size:12px; text-align:center; }
 .card-evento-cuadrilla .parte-fecha { display:inline; }
 .card-evento-cuadrilla .dia { color:#FFF; background-color:#7c808b; width:20px; height:20px; margin-left:auto; margin-right:auto; border-radius:50%; display:inline-block; padding-top:1px; } 
@@ -27,7 +27,7 @@
 @media only screen and (min-width: 768px) 
 {
     .card-evento-cuadrilla { width:33.3%; padding:10px 10px; margin-top:10px; }
-    .card-evento-cuadrilla .info-evento { padding:20px 10px; }
+    .card-evento-cuadrilla .info-evento { padding:20px 10px; min-height:200px; }
     .card-evento-cuadrilla .fechas-evento { width:25%; font-size:14px; }
     .card-evento-cuadrilla .parte-fecha { display:block; }
     .card-evento-cuadrilla .dia { width:35px; height:35px; padding-top: 7px; }
