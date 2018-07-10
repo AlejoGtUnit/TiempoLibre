@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Eventos Relacionados</title>
+        <link rel="stylesheet" href="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets_2017/stylesheets/styles2018.css">        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://d3ustg7s7bf7i9.cloudfront.net/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://d3ustg7s7bf7i9.cloudfront.net/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css">
+        <style>
+            body { background-color:#ecedef; }
+            
+            /*Inicio Mobile*/
+            #modulo-eventos-relacionados { background-color:#FFF; padding:15px 20px 15px 20px; }
+            #modulo-eventos-relacionados h3 { text-align:center; }
+            #modulo-eventos-relacionados #nav-eventos-relacionados { display:block; margin-bottom:10px; }
+            #modulo-eventos-relacionados .owl-prev { display:inline-block; color:#4783b2; }
+            #modulo-eventos-relacionados .owl-next { display:inline-block; color:#4783b2; float:right; }
+            #modulo-eventos-relacionados .fa-caret-square-left { font-size:30px; cursor:pointer; }
+            #modulo-eventos-relacionados .fa-caret-square-right { font-size:30px; cursor:pointer; }
+            #modulo-eventos-relacionados .owl-prev.disabled, #modulo-eventos-relacionados .owl-next.disabled { color:gray; cursor:inherit; } 
+            #modulo-eventos-relacionados #owl-carousel-eventos-relacionados .owl-dots { margin-top: 10px; }
+            #modulo-eventos-relacionados .owl-dot.active span { background-color:#4783b2; }
+            
+            .evento-relacionado { box-shadow: 2px 2px 2px 2px rgba(0,0,0,.08); margin-bottom:3px; }
+            .evento-relacionado .imagen { width:100%; }
+            .evento-relacionado .info-evento-relacionado { padding:10px; }
+            .evento-relacionado .titulo { font-weight:bold; color:#4783b2; font-size:18px; }
+            .evento-relacionado .resumen { color:#757575; font-size:13px; margin-top:4px; }
+            
+            /*Fin Mobile*/
+            
+            /*Inicio Desk*/
+            @media only screen and (min-width: 768px)
+            {
+                #modulo-eventos-relacionados { padding:20px 40px 20px 40px; }
+                #modulo-eventos-relacionados .fa-caret-square-left { font-size:35px; }
+                #modulo-eventos-relacionados .fa-caret-square-right { font-size:35px; }
+                .evento-relacionado .info-evento-relacionado { min-height:150px; }
+            }
+            /*Fin Desk*/
+        </style>
+    </head>
+    <body>
+        <br>
+        <script id="template-card-evento-relacionado" type="x-tmpl-mustache">
+             <div class="evento-relacionado">
+                <a href="{{urlEvento}}" target="_blank">
+                    <img src="{{imagenSmall}}" class="imagen" alt="" />
+                    <div class="info-evento-relacionado">
+                        <p class="titulo">{{titulo}}</p>
+                        <p class="resumen">{{resumen}}</p>
+                    </div>
+                </a>
+             </div>
+        </script>
+        <div class="wrapper" id="modulo-eventos-relacionados">
+            <div>
+                <h3>Otros eventos</h3>
+            </div>
+            <div id="nav-eventos-relacionados">
+            </div>
+            <div id="owl-carousel-eventos-relacionados" class="owl-carousel owl-theme"> 
+
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/clientSide/js/mustache.min.js"></script>
+    <script type="text/javascript" src="https://gnwebprensalibrerootwest.s3.amazonaws.com/App_Themes/PL/assets/images/redaccion/TiempoLibre_Vertical/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+        var urlService = "";
+        if (window.location.href.indexOf("gnw.prensalibre.com") > -1)
+            urlService = "//gnw.prensalibre.com/TiempoLibreService";
+        else
+            urlService = "//gnw.prensalibre.com/TiempoLibreService";
+        
+        var templateEventoRelacionado = $('#template-card-evento-relacionado').html();
+        Mustache.parse(templateEventoRelacionado);
+
+        var jqxhr = $.get(urlService, { top: 8, inicio: 1, fin: 9, categoria:"",  })
+        .done(function(data) {
+            if (data)
+            {
+                if (data.eventos.length > 0)
+                {
+                    data.eventos.forEach(function(eventoItem, index)
+                    {   
+                        //Propiedades agregadas para poder usar en MustacheJS
+                        eventoItem.mostrarHoraFinalAlFinal = eventoItem.mostrarFechaFinal && (eventoItem.fechaInicio.sinHora == eventoItem.fechaFinal.sinHora);
+                        eventoItem.mostrarFechaFinalPorSeparado = eventoItem.mostrarFechaFinal && (eventoItem.fechaInicio.sinHora != eventoItem.fechaFinal.sinHora);
+                        
+                        var htmlActualEventosRelacionados = $("#owl-carousel-eventos-relacionados").html();
+                        var htmlNuevoEventoRelacionado = Mustache.render(templateEventoRelacionado, eventoItem);  
+                        if (window.location.href != eventoItem.urlEventoCompleta)
+                            $("#owl-carousel-eventos-relacionados").html(htmlActualEventosRelacionados + htmlNuevoEventoRelacionado);
+                    });
+                }
+            }
+            
+            var owlCarouselEventosRelacionados = $("#owl-carousel-eventos-relacionados");
+            owlCarouselEventosRelacionados.owlCarousel({
+                loop:false,
+                margin:30,
+                nav:true,
+                dots: true,
+                responsive:{
+                  0:{
+                      items:1
+                  },
+                  600:{
+                      items:3
+                  }
+                },
+                navContainer: "#nav-eventos-relacionados"
+            });   
+
+            $("#modulo-eventos-relacionados .owl-prev").html("<span class='far fa-caret-square-left'></span>");
+            $("#modulo-eventos-relacionados .owl-next").html("<span class='far fa-caret-square-right'></span>");
+        });
+    </script>
+</html>
