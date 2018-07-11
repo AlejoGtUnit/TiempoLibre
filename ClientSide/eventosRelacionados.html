@@ -26,6 +26,7 @@
             .evento-relacionado { box-shadow: 2px 2px 2px 2px rgba(0,0,0,.08); margin-bottom:3px; }
             .evento-relacionado .imagen { width:100%; }
             .evento-relacionado .info-evento-relacionado { padding:10px; }
+            .evento-relacionado .fechas-evento-relacionado { color:#4c4f55; }
             .evento-relacionado .titulo { font-weight:bold; color:#4783b2; font-size:18px; }
             .evento-relacionado .resumen { color:#757575; font-size:13px; margin-top:4px; }
             
@@ -49,6 +50,17 @@
                 <a href="{{urlEvento}}" target="_blank">
                     <img src="{{imagenSmall}}" class="imagen" alt="" />
                     <div class="info-evento-relacionado">
+                        <div class="fechas-evento-relacionado">
+                            <span class="far fa-calendar-check"></span>
+                            <span class="far fa-clock"></span>&nbsp;
+                            <span>{{fechaInicio.mes.nombre}} {{fechaInicio.dia}} {{fechaInicio.hora}}:{{fechaInicio.minuto}}h</span>
+                            {{#mostrarHoraFinalAlFinal}}
+                            <span> | {{ fechaFinal.hora}}:{{fechaFinal.minuto}}h</span>
+                            {{/mostrarHoraFinalAlFinal}}
+                            {{#mostrarFechaFinalPorSeparado}}
+                            <span> - {{fechaFinal.mes.nombre}} {{fechaFinal.dia}} {{fechaFinal.hora}}:{{fechaFinal.minuto}}h</span>
+                            {{/mostrarFechaFinalPorSeparado}}
+                        </div>
                         <p class="titulo">{{titulo}}</p>
                         <p class="resumen">{{resumen}}</p>
                     </div>
@@ -79,7 +91,7 @@
         var templateEventoRelacionado = $('#template-card-evento-relacionado').html();
         Mustache.parse(templateEventoRelacionado);
 
-        var jqxhr = $.get(urlService, { top: 8, inicio: 1, fin: 9, categoria:"",  })
+        var jqxhr = $.get(urlService, { top: 8, inicio: 1, fin: 9, categoria:"" })
         .done(function(data) {
             if (data)
             {
